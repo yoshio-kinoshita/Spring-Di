@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration
 // SpringのUnitテストとして実行
 @RunWith(SpringJUnit4ClassRunner.class)
-public class ExampleServiceTest {
+public class ExampleDiServiceTest {
 
 	// serviceをインジェクション.ExampleServiceがインジェクションされる。
 	@Autowired
@@ -21,5 +21,10 @@ public class ExampleServiceTest {
 	@Test
 	public void getMessage() {
 		assertEquals("Hello world!", service.getMessage());
+	}
+	
+	@Test
+	public void findProduct() {
+		assertEquals("findProduct", service.findProduct());
 	}
 }

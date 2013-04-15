@@ -9,11 +9,15 @@ import org.springframework.stereotype.Component;
  */
 // @Componentがインジェクションする対象.
 @Component
-public class ExampleService implements Service {
+public class ExampleDiService implements Service {
 
 	@Override
 	public String getMessage() {
 		return "Hello world!";
 	}
-
+	
+	@Override
+	public String findProduct() {
+		return "findProduct";
+	}
 }
